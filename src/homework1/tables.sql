@@ -54,7 +54,6 @@ CREATE TABLE tickets (
     status VARCHAR(20)
 );
 ALTER TABLE tickets
-    ALTER COLUMN title SET NOT NULL,
     ADD CONSTRAINT chk_price_positive CHECK (price > 0),
     ALTER COLUMN status SET DEFAULT 'NEW';
 
